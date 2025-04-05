@@ -1,23 +1,96 @@
-# ModeloAI
+# Modelo de Clasificación de Intenciones
 
-Este proyecto tiene como objetivo crear un modelo de inteligencia artificial que interprete cadenas de texto para ejecutar comandos basados en intenciones.
+Este proyecto utiliza **spaCy** para entrenar un modelo de clasificación de texto que identifica intenciones en frases relacionadas con correos electrónicos. El modelo puede clasificar frases en las siguientes categorías:
 
-## Estructura del proyecto
+- **ENVIAR_CORREO**
+- **HISTORIAL_CORREOS**
+- **CORREOS_RECIBIDOS**
+- **ABRIR_CORREO**
+- **RESPONDER_CORREO**
+- **REENVIAR_CORREO**
+- **ELIMINAR_CORREO**
 
-- `main.py`: Archivo principal para ejecutar el programa.
-- `data/`: Carpeta para almacenar datos crudos y procesados.
-- `models/`: Contiene los modelos de preprocesamiento y clasificación de intenciones.
-- `notebooks/`: Notebooks para exploración y entrenamiento.
-- `scripts/`: Scripts para entrenamiento, evaluación y predicción.
-- `tests/`: Pruebas unitarias para los módulos.
+Repositorio del proyecto: [https://github.com/Santiago-Ospina-Gonzalez/ModeloAI](https://github.com/Santiago-Ospina-Gonzalez/ModeloAI)
 
-## Requisitos
+---
 
-Consulta el archivo `requirements.txt` para las dependencias necesarias.
+## ✨ Estructura del Proyecto
 
-## Ejecución
+- `main.py`: Entrena el modelo y realiza predicciones básicas.
+- `test_model.py`: Contiene ejemplos de prueba para evaluar el modelo con frases de cada categoría.
+- `entrenamiento.jsonl`: Archivo con los datos de entrenamiento en formato JSONL.
+- `modelo_intenciones/`: Carpeta donde se guarda el modelo entrenado.
+- `requirements.txt`: Lista de dependencias necesarias para ejecutar el proyecto.
 
-Para ejecutar el archivo principal:
+---
+
+## 🚀 Requisitos
+
+- Python 3.8 o superior.
+- Dependencias listadas en `requirements.txt`.
+
+---
+
+## 🔧 Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/Santiago-Ospina-Gonzalez/ModeloAI
+   cd ModeloAI
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Descarga el modelo base de spaCy para español:
+   ```bash
+   python -m spacy download es_core_news_sm
+   ```
+
+---
+
+## ⚙️ Uso
+
+### Entrenar el modelo
+
+Ejecuta el archivo `main.py` para entrenar el modelo:
 ```bash
 python main.py
 ```
+El modelo entrenado se guardará en la carpeta `modelo_intenciones`.
+
+### Probar el modelo
+
+Ejecuta `test_model.py` para probar el modelo con ejemplos predefinidos:
+```bash
+python test_model.py
+```
+Esto mostrará las predicciones del modelo para cada frase de prueba, junto con la categoría predicha y el nivel de confianza.
+
+---
+
+## 📂 Formato de los Datos de Entrenamiento
+
+El archivo `entrenamiento.jsonl` contiene frases etiquetadas con las categorías correspondientes. Ejemplo:
+
+```json
+["Por favor, envía un correo a Juan.", {"cats": {"ENVIAR_CORREO": 1, "HISTORIAL_CORREOS": 0, "CORREOS_RECIBIDOS": 0, "ABRIR_CORREO": 0, "RESPONDER_CORREO": 0, "REENVIAR_CORREO": 0, "ELIMINAR_CORREO": 0}}]
+```
+
+---
+
+## 📊 Dependencias
+
+- Python 3.8+
+- spaCy
+- es_core_news_sm
+- spacy-lookups-data
+
+---
+
+## 💼 Contribuciones
+
+Si deseas contribuir, por favor abre un issue o envía un pull request. Toda ayuda es bienvenida para mejorar este proyecto.
+

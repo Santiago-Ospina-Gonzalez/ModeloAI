@@ -1,0 +1,13 @@
+{
+  "labels":[
+    "ENVIAR_CORREO",
+    "HISTORIAL_CORREOS",
+    "CORREOS_RECIBIDOS",
+    "ABRIR_CORREO",
+    "RESPONDER_CORREO",
+    "REENVIAR_CORREO",
+    "ELIMINAR_CORREO"
+  ],
+  "threshold":0.5,
+  "positive_label":null
+}

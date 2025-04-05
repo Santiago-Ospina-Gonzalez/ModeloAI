@@ -1,4 +1,4 @@
-numpy
-pandas
-scikit-learn
-nltk
+Python 3.8+
+spaCy
+es_core_news_sm
+spacy-lookups-data 

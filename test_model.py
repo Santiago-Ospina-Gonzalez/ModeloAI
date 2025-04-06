@@ -35,7 +35,23 @@ if __name__ == "__main__":
         
         # ELIMINAR_CORREO
         "Elimina este correo de mi bandeja de entrada.",
-        "Por favor, borra este mensaje."
+        "Por favor, borra este mensaje.",
+        
+        # AGREGAR_EVENTO
+        "Quiero agregar un evento para mañana.",
+        "Añade un evento a mi calendario para el lunes.",
+        
+        # LISTAR_EVENTOS
+        "Muéstrame todos los eventos de esta semana.",
+        "Quiero ver los eventos programados para hoy.",
+        
+        # ELIMINAR_EVENTO
+        "Elimina el evento que tengo mañana.",
+        "Borra el evento de la tarde, por favor.",
+        
+        # ACTUALIZAR_EVENTO
+        "Actualiza el evento del lunes a las 3 PM.",
+        "Cambia la hora del evento de mañana a las 5 PM."
     ]
 
     # Realiza predicciones para cada ejemplo

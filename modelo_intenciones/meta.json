@@ -501,6 +501,10 @@
       "PER"
     ],
     "textcat":[
+      "AGREGAR_EVENTO",
+      "LISTAR_EVENTOS",
+      "ELIMINAR_EVENTO",
+      "ACTUALIZAR_EVENTO",
       "ENVIAR_CORREO",
       "HISTORIAL_CORREOS",
       "CORREOS_RECIBIDOS",

@@ -8,8 +8,8 @@ def load_training_data(filepath):
     training_data = []
     with open(filepath, "r", encoding="utf-8") as file:
         for line in file:
-            text, annotations = json.loads(line)
-            training_data.append((text, annotations))
+            data = json.loads(line)
+            training_data.append(data)  # Agrega el diccionario completo
     return training_data
 
 def train_intent_model():
@@ -28,7 +28,13 @@ def train_intent_model():
     }
     textcat = nlp.add_pipe("textcat", config=textcat_config)
 
-    # Define las etiquetas de intención
+    # Define las etiquetas de intención para eventos
+    textcat.add_label("AGREGAR_EVENTO")
+    textcat.add_label("LISTAR_EVENTOS")
+    textcat.add_label("ELIMINAR_EVENTO")
+    textcat.add_label("ACTUALIZAR_EVENTO")
+    
+    # Define las etiquetas de intención para correos
     textcat.add_label("ENVIAR_CORREO")
     textcat.add_label("HISTORIAL_CORREOS")
     textcat.add_label("CORREOS_RECIBIDOS")
@@ -42,10 +48,10 @@ def train_intent_model():
 
     # Entrenamiento del modelo
     optimizer = nlp.begin_training()
-    for epoch in range(10):  # Ajusta el número de épocas según sea necesario
+    for epoch in range(15):  # Ajusta el número de épocas según sea necesario
         losses = {}
-        for text, annotations in train_data:
-            example = Example.from_dict(nlp.make_doc(text), annotations)
+        for data in train_data:
+            example = Example.from_dict(nlp.make_doc(data["text"]), data)
             nlp.update([example], drop=0.5, losses=losses)
         print(f"Epoch {epoch + 1}, Losses: {losses}")
 
@@ -62,6 +68,6 @@ def predict_intent(text):
 if __name__ == "__main__":
     train_intent_model()
     # Ejemplo de predicción
-    texto = "Quiero enviar un correo"
+    texto = "Quiero agregar un evento"
     prediccion = predict_intent(texto)
     print(f"Predicción para '{texto}': {prediccion}")

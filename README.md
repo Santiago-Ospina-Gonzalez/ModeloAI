@@ -22,7 +22,6 @@ Repositorio del proyecto: [https://github.com/Santiago-Ospina-Gonzalez/ModeloAI]
 
 - `main.py`: Entrena el modelo y realiza predicciones básicas.
 - `test_model.py`: Contiene ejemplos de prueba para evaluar el modelo con frases de cada categoría.
-- `entrenamiento.jsonl`: Archivo con los datos de entrenamiento en formato JSONL.
 - `modelo_intenciones/`: Carpeta donde se guarda el modelo entrenado.
 - `requirements.txt`: Lista de dependencias necesarias para ejecutar el proyecto.
 - `entrenamiento.jsonl`: Archivo con los datos de entrenamiento en formato JSONL, que incluye frases relacionadas con correos y eventos.

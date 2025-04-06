@@ -9,6 +9,10 @@ Este proyecto utiliza **spaCy** para entrenar un modelo de clasificación de tex
 - **RESPONDER_CORREO**
 - **REENVIAR_CORREO**
 - **ELIMINAR_CORREO**
+- **AGREGAR_EVENTO**
+- **LISTAR_EVENTOS**
+- **ELIMINAR_EVENTO**
+- **ACTUALIZAR_EVENTO**
 
 Repositorio del proyecto: [https://github.com/Santiago-Ospina-Gonzalez/ModeloAI](https://github.com/Santiago-Ospina-Gonzalez/ModeloAI)
 
@@ -21,7 +25,7 @@ Repositorio del proyecto: [https://github.com/Santiago-Ospina-Gonzalez/ModeloAI]
 - `entrenamiento.jsonl`: Archivo con los datos de entrenamiento en formato JSONL.
 - `modelo_intenciones/`: Carpeta donde se guarda el modelo entrenado.
 - `requirements.txt`: Lista de dependencias necesarias para ejecutar el proyecto.
-
+- `entrenamiento.jsonl`: Archivo con los datos de entrenamiento en formato JSONL, que incluye frases relacionadas con correos y eventos.
 ---
 
 ## 🚀 Requisitos
@@ -76,7 +80,7 @@ Esto mostrará las predicciones del modelo para cada frase de prueba, junto con 
 El archivo `entrenamiento.jsonl` contiene frases etiquetadas con las categorías correspondientes. Ejemplo:
 
 ```json
-["Por favor, envía un correo a Juan.", {"cats": {"ENVIAR_CORREO": 1, "HISTORIAL_CORREOS": 0, "CORREOS_RECIBIDOS": 0, "ABRIR_CORREO": 0, "RESPONDER_CORREO": 0, "REENVIAR_CORREO": 0, "ELIMINAR_CORREO": 0}}]
+{"text": "Quiero agregar un evento para mañana.", "cats": {"ENVIAR_CORREO": 0, "HISTORIAL_CORREOS": 0, "CORREOS_RECIBIDOS": 0, "ABRIR_CORREO": 0, "RESPONDER_CORREO": 0, "REENVIAR_CORREO": 0, "ELIMINAR_CORREO": 0, "AGREGAR_EVENTO": 1, "LISTAR_EVENTOS": 0, "ELIMINAR_EVENTO": 0, "ACTUALIZAR_EVENTO": 0}}
 ```
 
 ---

@@ -52,6 +52,10 @@ if __name__ == "__main__":
         # ACTUALIZAR_EVENTO
         "Actualiza el evento del lunes a las 3 PM.",
         "Cambia la hora del evento de mañana a las 5 PM."
+
+        # AGREGAR_NOTIFICACION
+        "Quiero agregar una notificación para el viernes.",
+        "Añade una notificacion para la reunión de mañana.",
     ]
 
     # Realiza predicciones para cada ejemplo

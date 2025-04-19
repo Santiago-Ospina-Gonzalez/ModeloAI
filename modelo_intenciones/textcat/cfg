@@ -10,7 +10,8 @@
     "ABRIR_CORREO",
     "RESPONDER_CORREO",
     "REENVIAR_CORREO",
-    "ELIMINAR_CORREO"
+    "ELIMINAR_CORREO",
+    "ENVIAR_NOTIFICACION"
   ],
   "threshold":0.5,
   "positive_label":null

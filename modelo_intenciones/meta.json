@@ -511,7 +511,8 @@
       "ABRIR_CORREO",
       "RESPONDER_CORREO",
       "REENVIAR_CORREO",
-      "ELIMINAR_CORREO"
+      "ELIMINAR_CORREO",
+      "ENVIAR_NOTIFICACION"
     ]
   },
   "pipeline":[

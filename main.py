@@ -43,6 +43,10 @@ def train_intent_model():
     textcat.add_label("REENVIAR_CORREO")
     textcat.add_label("ELIMINAR_CORREO")
 
+    # Define las etiquetas de intención para notificaciones
+    textcat.add_label("ENVIAR_NOTIFICACION")
+
+    
     # Carga los datos de entrenamiento desde el archivo
     train_data = load_training_data("entrenamiento.jsonl")
 
